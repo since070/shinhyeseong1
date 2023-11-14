@@ -1,0 +1,119 @@
+:root{
+    --body-bg: rgb(91, 77, 155);
+    --haberger-bg:rgb(245, 107, 107);
+}   
+html,body{
+    height: 100%;
+}
+body{
+    background-color: var(--body-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+}
+
+.menu{
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.mid{
+    width: 100px;
+    height: 200px;
+    background-color: rgb(9, 0, 139);
+}
+.hamburger-container{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    padding-left: 93%;
+    background: white;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    transition: 0.5s;
+    background: rgb(107, 144, 245);
+}
+.hamburger::before,
+.hamburger::after{
+    content: "";
+}
+.hamburger{
+    top: 50%;
+}
+.hamburger::before{
+    top: -30px;
+}
+.hamburger::after{
+    top: 30px;
+}
+.toggle:checked ~ .hamburger::after{
+    top: 0;
+    transform: rotate(225deg);
+}
+.toggle:checked ~ .hamburger::before{
+    top: 0;
+    transform: rotate(135deg);
+}
+.toggle:checked ~ .hamburger{
+    background: white;
+}
+.toggle{
+    opacity: 0;
+}
+.bg{
+    height: 500px;
+    background-color:  aliceblue;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-top: 10px;
+}    
+.circle{
+    background-image: url(다오.jpg);
+    margin: 50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 100px;
+    border: 5px solid brown;
+    display: flex;
+    margin-left: 800px;
+    margin-top: 90px;
+}
+.circle:hover{
+    transform: scale(1.2);
+}
+.name{
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 60px;
+    font-size: 20px;
+}
+button{
+    color: darkkhaki;
+    margin-top: 50px;
+    margin-left: 800px;
+    font-size: 30px;
+    width: 300px;
+    height: 70px;
+}
+footer{
+    width: 500px;
+    height: 120px;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 700px;
+    text-align: center;
+    font-size: 20px;
+    overflow: auto;
+}
